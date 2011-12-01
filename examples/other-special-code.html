@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<title>web特殊字符</title>
+	<style type="text/css">
+		table{border-collapse:collapse;}
+		td{border:1px solid #eee;;padding:5px 8px;}
+	</style>
+	</head>
+	<body>
+		<div class="wrap">
+	
+			<h2>web特殊字符表（900）</h2>
+			<p>鼠标停留在字符上可显示其编号n(&amp;#n;)</p>
+
+			<script type="text/javascript">
+				var html = ['<table>'];
+				for(var i=0;i<30;i++){
+					html.push('<tr>');
+					for(var j=0;j<30;j++){
+						var n = i*30+j;
+						var s = '&#'+n+';';
+						html.push('<td title="'+n+'">'+s+'</td>');
+					}
+					html.push('</tr>');
+				}
+				html.push('</table>');
+				document.write( html.join('\n') );
+			</script>
+
+		</div>
+	</body>
+</html>
